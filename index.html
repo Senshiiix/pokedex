@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pokédex</h1>
+        </header>
+        <main>
+            <form id="pokemon-form">
+                <input type="text" id="pokemon-name" placeholder="Nom du Pokémon" list="pokemon-list" required>
+                <datalist id="pokemon-list"></datalist>
+                <button type="submit">Rechercher</button>
+            </form>
+            <div id="pokemon-info" class="pokemon-info">
+                <h2 id="pokemon-name-display"></h2>
+                <img id="pokemon-image">
+                <p id="pokemon-type"></p>
+                <button id="more-info-button">Plus d'infos</button>
+            </div>
+        </main>
+        
+        <!-- Historique des Pokémon -->
+        <section id="recent-viewed" class="recent-viewed">
+            <h2>Historique des Pokémon</h2>
+            <div id="recent-cards" class="cards-container"></div>
+        </section>
+        
+        <!-- Recommandations -->
+        <section id="recommendations" class="recommendations">
+            <h2>Recommandations</h2>
+            <div id="recommendation-cards" class="cards-container"></div>
+        </section>
+    </div>
+
+    <!-- Modal -->
+    <div id="pokemon-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-name"></h2>
+            <img id="modal-image" src="" alt="">
+            <p id="modal-type"></p>
+            <p id="modal-height"></p>
+            <p id="modal-weight"></p>
+            <p id="modal-abilities"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
